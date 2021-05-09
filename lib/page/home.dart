@@ -57,6 +57,9 @@ class _HomePageState extends State<HomePage> {
                           primary: Color.fromRGBO(255, 30, 100, 1),
                         ),
                         onPressed: () {
+                          if (_estatura < 1) {
+                            return;
+                          }
                           Navigator.push(
                             context,
                             MaterialPageRoute(

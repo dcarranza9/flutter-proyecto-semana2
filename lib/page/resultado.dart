@@ -16,6 +16,8 @@ class Resultado extends StatelessWidget {
     double _estatura = double.parse(params.remove("estatura")!) / 100;
     double resultado = _peso / pow(_estatura, 2);
 
+    resultado = (resultado >= 99) ? 99.99 : resultado;
+
     if (resultado <= 18.5) {
       _estado = "bajo";
       _color = Colors.red;
